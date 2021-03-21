@@ -1,0 +1,36 @@
+package practica1;
+import java.util.Scanner;
+public class PRACTICA1 {
+ public static void main(String[] args) {
+ int veces=0;
+ int fin=0;
+ do {
+ String pass;
+ String password = "L4T1Na2021**";
+ Scanner ingreso = new Scanner(System.in);
+ System.out.println("Ingrese su contraseña"); 
+ pass= ingreso.next();
+ if(pass.equals(password))
+ {
+ System.out.println("Contraseña aceptada");
+ fin=1;
+ }
+ 
+ else
+ {
+ System.out.println("Contraseña incorrecta");
+ veces++;
+ if (veces==3)
+ 
+ {
+ System.out.println("Intentos agotados, comuníquese con el  administrador");
+ System.out.println("ACCESO RESTRINGIDO!!");
+ }
+ } 
+ 
+ 
+ }
+ 
+ while ((veces!= 3)&&fin==0);
+ }
+ }
