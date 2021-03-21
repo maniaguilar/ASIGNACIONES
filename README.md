@@ -1,2 +1,3 @@
-# TAREA-1
-Crear un software en el cual un usuario va a tener que ingresar sus credenciales para accesar al "Sistema" (Usuario y Contraseña). Una vez accesado al "Sistema" al usuario debe aparecer un menú principal de opciones las cuales será el siguiente: 1. Cambiar la contraseña; 2. Llenar la información de su perfil (Dirección, número de teléfono, DNI, Nacionalidad); 3. Pedido: Seleccione un (1) artículo el cual será enviado a su domicilio;. 4. Salir: Una vez seleccionada esta opción, el "Sistema" debe mostrar el siguiente mensaje: "Su orden fue completada con éxito, a la hora tal {Hora del sistema} - La misma será enviada a su domicilio
+TAREEAS
+Estas son las tareas asignadas en la materia PROGRAMACION II
+Fueron trabajadas de manera indivual
