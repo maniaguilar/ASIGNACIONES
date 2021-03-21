@@ -1,0 +1,147 @@
+package menu;
+import java.util.Scanner;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class Menu {
+	private static SimpleDateFormat formatoHora;
+	Scanner teclado = new Scanner(System.in);
+
+	public void menu() {
+            Date fechaActual = new Date();
+        
+        //Formateando la fecha:
+        int DateFormat;
+        
+        formatoHora = new SimpleDateFormat("HH:mm:ss");
+        DateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        
+
+int veces=0;
+ int fin=0;
+ do {
+ String pass;
+ String password = "L4T1Na2021**";
+ String user;
+ String usuario ="MAGUI22";
+ Scanner ingreso = new Scanner(System.in);
+ System.out.println("Ingrese su usuario"); 
+ user= ingreso.next();
+ 
+ System.out.println("Ingrese su contraseña"); 
+ pass= ingreso.next();
+ if(pass.equals(password) && user.equals(usuario) )
+ {
+ System.out.println("Acceso exitoso, que deseas hacer?");
+ fin=1;
+ }
+ 
+ else
+ {
+ System.out.println("Credenciales incorrectos, intente nuevamente");
+ veces++;
+ if (veces==3)
+ 
+ {
+ System.out.println("Intentos agotados, comuníquese con el  administrador");
+ System.out.println("ACCESO RESTRINGIDO!!");
+ }
+ } 
+ 
+ 
+ }
+ 
+ while ((veces!= 3)&&fin==0);
+ 
+
+            
+		String opc;
+		
+		do {
+			System.out.println();
+			System.out.println("----- Menú Principal -----"
+					+ "\n1. Cambiar la contraseña"
+					+ "\n2. Llenar la información de su perfil"
+					+ "\n3. Pedido"
+					+ "\n4. Salir");
+                        
+                        System.out.println( "Porfavor ingrese una opcion:  ");
+			opc = teclado.next();
+			
+			switch (opc) {
+			case "a":
+			case "1": Cambio(); break;
+			case "b":
+			case "2": Actualizacion();break;
+			case "c":
+			case "3": Pedido(); break;
+			case "d":
+			case "4": System.out.println();
+			
+			System.out.println("Su orden fue completada con éxito, a la hora tal: "+formatoHora.format(fechaActual)+" de fecha: "+formatoFecha.format(fechaActual));
+                        System.out.println ("La misma será enviada a su domicilio")
+                        }
+			
+		}while(!opc.equalsIgnoreCase("D"));
+	}
+	
+	public void Cambio() {
+            
+            String Password;
+            
+            Scanner Ingreso;
+            Ingreso= new Scanner(System.in);
+            String NewPassWord;
+            
+		System.out.println("Ingrese su nueva contraseña");
+		NewPassWord = Ingreso.next();
+            String nextLine = Ingreso.nextLine();
+            
+            
+            System.out.println("Contraseña actualizada");
+	}
+	
+	public void Actualizacion() {
+		System.out.println();
+                String Direccion;
+                String Telefono;
+                String DNI;
+                String Nacionalidad;
+
+            Scanner Act = new Scanner(System.in);
+		System.out.println("Porfavor ingrese su direccion");
+                Direccion = Act.nextLine();
+                
+                System.out.println("Porfavor ingrese su numero de telefono");
+                Telefono = Act.nextLine();
+                System.out.println("Porfavor ingrese su numero de indentificacion");
+                DNI = Act.nextLine();
+                System.out.println("Porfavor ingrese su nacionalidad");
+                Nacionalidad = Act.nextLIne();
+                
+                System.out.println("---DATOS ACTUALIZADOS---");
+                
+	}
+	
+	public void Pedido() {
+        int producto;
+		System.out.println(" Seleccione un (1) artículo el cual será enviado a su domicilio");
+               
+                System.out.println ("1. pack 50 mascarillas quirurgicas");
+                 System.out.println ("2. Unidad de pantallas faciles");
+                 System.out.println ("3. Unidad de hand gel");
+                  System.out.println ("4. Alcohol Wipes");
+              Scanner Ped = new Scanner(System.in);
+              producto = Ped.nextInt();
+                
+            System.out.println ("Usted a seleccionado su producto con exito");
+                
+	}	
+
+	public static void main(String[] args) {
+            
+		Menu fc = new Menu();
+		fc.menu();
+	}
+        
+}
